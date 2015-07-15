@@ -1,0 +1,30 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="security_mode"
+        android:title="@string/pref_title_security_mode"
+        android:defaultValue="@string/pref_security_mode_default"
+        android:entries="@array/pref_security_mode_list_titles"
+        android:entryValues="@array/pref_security_mode_list_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <ListPreference
+        android:key="rounding_style"
+        android:title="@string/pref_title_rounding_style"
+        android:defaultValue="@string/pref_rounding_style_default"
+        android:entries="@array/pref_rounding_style_list_titles"
+        android:entryValues="@array/pref_rounding_style_list_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <EditTextPreference
+        android:key="constant_change_amount"
+        android:title="@string/pref_title_exact_change_amount"
+        android:defaultValue="@string/pref_default_exact_change_amount"
+        android:selectAllOnFocus="true"
+        android:inputType="number"
+        android:maxLength="2"
+        android:singleLine="true"
+        android:enabled="false"
+        android:saveEnabled="true" />
+</PreferenceScreen>

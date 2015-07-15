@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <!-- Bill Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Bill Amount"
+        android:id="@+id/txtBillTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center" />
+    <!-- Bill Amount -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:ems="10"
+        android:id="@+id/txtBillAmount"
+        android:layout_below="@+id/txtBillTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textAlignment="center"
+        android:gravity="center" />
+    <!-- Tip Percent Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tip Percent"
+        android:id="@+id/txtTipPercentTitle"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtBillAmount"
+        android:gravity="center" />
+    <!-- Tip Percent -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:ems="16"
+        android:id="@+id/txtTipPercent"
+        android:textAlignment="center"
+        android:text="---"
+        android:layout_below="@+id/txtTipPercentTitle"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
+    <!-- Tip Percent Slider -->
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekTipPercent"
+        android:layout_below="@+id/txtTipPercent"
+        android:layout_marginTop="5dp"
+
+        android:layout_toEndOf="@+id/btnTipPercentDown"
+        android:layout_toRightOf="@+id/btnTipPercentDown"
+        android:layout_toStartOf="@+id/btnTipPercentUp"
+        android:layout_toLeftOf="@+id/btnTipPercentUp"
+
+        android:layout_centerHorizontal="true" />
+    <!-- Tip Percent Down Button -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTipPercentDown"
+        android:contentDescription="Minus"
+        android:src="@drawable/btn_tip_down"
+        android:layout_alignTop="@+id/seekTipPercent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitCenter"
+        android:background="@null" />
+    <!-- Tip Percent Up Button -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTipPercentUp"
+        android:contentDescription="Plus"
+        android:src="@drawable/btn_tip_up"
+        android:layout_alignTop="@+id/seekTipPercent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="fitCenter"
+        android:background="@null" />
+    <!-- Tip Amount Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tip Amount"
+        android:id="@+id/txtTipAmountTitle"
+        android:layout_above="@+id/txtTipAmount"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
+    <!-- Tip Amount -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0.00"
+        android:id="@+id/txtTipAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/txtTotalAmountTitle"
+        android:gravity="center" />
+    <!-- Total Amount Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Total Amount"
+        android:id="@+id/txtTotalAmountTitle"
+        android:layout_above="@+id/txtTotalAmount"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
+    <!-- Total Amount -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0.00"
+        android:id="@+id/txtTotalAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:gravity="center" />
+
+
+</RelativeLayout>
